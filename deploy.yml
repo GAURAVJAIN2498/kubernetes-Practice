@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment  
+metadata:
+   name: mydeploy
+spec:
+   replicas: 2
+   selector:     
+    matchLabels:
+     name: deployment
+   template:
+     metadata:
+       name: pod7
+       labels:
+         name: deployment
+     spec:
+      containers:
+        - name: c00
+          image: ubuntu
+          command: ["/bin/bash", "-c", "while true; do echo Technical-Guftgu; sleep 5; done"]

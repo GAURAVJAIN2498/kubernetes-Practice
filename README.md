@@ -7,6 +7,8 @@ $ kubectl config set-context $(kubectl config current-context) --namespace=dev
 $ kubectl config view | grep namespace:
 
 # default range
+request=minimum
+limit=max
 
 cpu:
      request=0.5
